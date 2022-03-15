@@ -1,5 +1,5 @@
 <template>
-  <h1>Свободные даты сезон 2022</h1>
+  <h1>Календарь бронирования - Фотограф Натали Моис</h1>
   <Calendar
     :columns="layout.columns"
     :rows="layout.rows"
