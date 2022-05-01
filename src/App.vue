@@ -7,9 +7,9 @@
     :is-expanded="layout.isExpanded"
     :date="date"
     :attributes="attributes"
-    :from-date="start_year"
+    :from-date="date"
     :to-date="end_year"
-    :min-date="start_year"
+    :min-date="date"
     :max-date="end_year"
   />
 </template>
