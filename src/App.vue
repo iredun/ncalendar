@@ -64,8 +64,8 @@ export default {
         },
       },
       date: new Date(),
-      start_year: new Date("2022-01-01"),
-      end_year: new Date("2022-12-31"),
+      start_year: new Date("2023-01-01"),
+      end_year: new Date("2023-12-31"),
       attributes: [
         {
           key: "today",
