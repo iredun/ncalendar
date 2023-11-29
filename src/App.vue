@@ -1,17 +1,8 @@
 <template>
   <h2>Фотограф Натали Моис Календарь бронирования</h2>
   <h4>🔴 - занятые даты</h4>
-  <Calendar
-    :columns="layout.columns"
-    :rows="layout.rows"
-    :is-expanded="layout.isExpanded"
-    :date="date"
-    :attributes="attributes"
-    :from-date="date"
-    :to-date="end_year"
-    :min-date="date"
-    :max-date="end_year"
-  />
+  <Calendar :columns="layout.columns" :rows="layout.rows" :is-expanded="layout.isExpanded" :date="date"
+    :attributes="attributes" :from-date="date" :to-date="end_year" :min-date="date" :max-date="end_year" />
 </template>
 
 <script>
@@ -64,8 +55,8 @@ export default {
         },
       },
       date: new Date(),
-      start_year: new Date("2023-01-01"),
-      end_year: new Date("2023-12-31"),
+      start_year: new Date("2024-01-01"),
+      end_year: new Date("2024-12-31"),
       attributes: [
         {
           key: "today",
