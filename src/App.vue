@@ -8,7 +8,7 @@
 <script>
 import "v-calendar/dist/style.css";
 import { Calendar } from "v-calendar";
-import dates from "./data.json";
+// import dates from "./data.json";
 
 export default {
   name: "App",
@@ -19,6 +19,23 @@ export default {
     layout() {
       return this.variants[this.$grid.breakpoint];
     },
+  },
+  created: function () {
+    fetch("https://redun.ru/ncalendar/dates.json")
+      .then(r => r.json())
+      .then(json => {
+        this.attributes = [
+          {
+            key: "today",
+            highlight: true,
+            dates: new Date(),
+          },
+          {
+            highlight: "red",
+            dates: json,
+          },
+        ];
+      });
   },
   data() {
     return {
@@ -57,17 +74,7 @@ export default {
       date: new Date(),
       start_year: new Date("2024-01-01"),
       end_year: new Date("2024-12-31"),
-      attributes: [
-        {
-          key: "today",
-          highlight: true,
-          dates: new Date(),
-        },
-        {
-          highlight: "red",
-          dates: dates,
-        },
-      ],
+      attributes: []
     };
   },
 };
